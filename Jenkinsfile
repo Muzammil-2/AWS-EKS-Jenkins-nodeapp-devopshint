@@ -14,11 +14,10 @@ pipeline {
               sh 'npm i'
             }
         }
-        /*stage('Deploy') { 
+     stage('Build_Docker_Image') { 
             steps {
-                // 
+                sh 'docker build -t quadrimuzammil/devopshint:${BUILD_NUMBER} .'
             }
         }
-     */
     }
 }
